@@ -1,0 +1,10 @@
+#!/bin/bash
+
+GAMMU=`which gammu-smsd`
+
+gammu_smsd_stop
+sleep 3
+
+CWD=`pwd`
+$GAMMU --config /etc/gammu-smsdrc --daemon
+cd $CWD
